@@ -5,10 +5,10 @@ package com.example.cardealerapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.os.Bundle;
+
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+
 
 public class ActivityOpenHelper extends SQLiteOpenHelper {
 
