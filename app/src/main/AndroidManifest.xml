@@ -12,6 +12,18 @@
         android:theme="@style/Theme.CarDealerApp"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityOpenHelper"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityClients"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCars"
+            android:exported="false" />
+        <activity
+            android:name=".ActivitySales"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
