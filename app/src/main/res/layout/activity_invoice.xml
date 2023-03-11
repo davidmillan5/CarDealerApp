@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/yellow"
+    tools:context=".InvoiceActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/grayblack"
+        />
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp">
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textSize="30sp"
+            android:hint="Enter Invoice"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:background="@color/whitey"
+            android:layout_marginLeft="12dp"/>
+
+        <Button
+            android:id="@+id/validateCar"
+            android:layout_width="180dp"
+            android:textSize="30dp"
+            android:layout_height="60dp"
+            android:onClick="Search"
+            android:text="Search"
+            android:backgroundTint="@color/grayblack"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="14dp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/InvoiceNumber"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceDate"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceClient"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceIdClient"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceCarModel"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceCarBrand"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/InvoiceCarPlate"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="320sp"
+            android:layout_height="50sp"
+            android:layout_marginTop="24dp"
+            android:textSize="18dp"
+            android:onClick="Back"
+            android:text="Back"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/grayblack"/>
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
