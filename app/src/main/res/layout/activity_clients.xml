@@ -154,7 +154,7 @@
             android:onClick="Back"
             android:text="Back"
             android:backgroundTint="@color/grayblack"/>
-
+    </LinearLayout>
 
 
 </LinearLayout>
