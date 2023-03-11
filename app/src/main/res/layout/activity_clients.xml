@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/clientid"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/grayblack"
@@ -17,12 +18,52 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="320sp"
-        android:layout_height="36sp"
+        android:layout_height="50sp"
         android:layout_marginTop="50sp"
         android:gravity="center"
         android:layout_gravity="center"
         android:background="@color/whitey"
+        android:textSize="20sp"
         android:text="TextView"/>
+
+    <EditText
+        android:id="@+id/etidentification"
+        android:layout_width="320sp"
+        android:layout_height="64sp"
+        android:ems="10"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:hint="Enter Your Id"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:inputType="number"
+        android:background="@color/whitey" />
+
+    <EditText
+        android:id="@+id/etfullname"
+        android:layout_width="320sp"
+        android:layout_height="64sp"
+        android:ems="10"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:hint="Enter Your Name"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:background="@color/whitey"/>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="320sp"
+        android:layout_height="64sp"
+        android:ems="10"
+        android:layout_marginTop="25dp"
+        android:textSize="30sp"
+        android:hint="Enter Your Mail"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:inputType="text"
+        android:background="@color/whitey"/>
 
 
 </LinearLayout>
