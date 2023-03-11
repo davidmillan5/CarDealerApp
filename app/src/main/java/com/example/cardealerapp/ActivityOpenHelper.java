@@ -5,12 +5,7 @@ package com.example.cardealerapp;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-
-
-public class ActivityOpenHelper extends SQLiteOpenHelper {
-
-
+import androidx.annotation.Nullable;
 
 
 public class ActivityOpenHelper extends SQLiteOpenHelper {
