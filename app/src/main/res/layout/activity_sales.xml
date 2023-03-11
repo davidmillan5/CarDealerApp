@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/yellow"
-    tools:context=".MainActivity">
+    tools:context=".ActivitySales">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,5 +14,157 @@
         android:background="@color/grayblack"
         />
 
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/etinvoice"
+            android:layout_width="180sp"
+            android:layout_height="64sp"
+            android:ems="10"
+            android:layout_marginTop="25dp"
+            android:textSize="27sp"
+            android:hint="Enter code"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:background="@color/whitey"/>
 
+        <EditText
+            android:id="@+id/etdate"
+            android:layout_width="160sp"
+            android:layout_height="64sp"
+            android:ems="10"
+            android:layout_marginTop="25dp"
+            android:textSize="26sp"
+            android:hint="Enter date"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:background="@color/whitey"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/etIdClient"
+            android:layout_width="180sp"
+            android:layout_height="64sp"
+            android:ems="10"
+            android:layout_marginTop="25dp"
+            android:textSize="26sp"
+            android:hint="Enter id"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="text"
+            android:background="@color/whitey"/>
+
+        <EditText
+            android:id="@+id/etCarPlate"
+            android:layout_width="160sp"
+            android:layout_height="64sp"
+            android:ems="10"
+            android:layout_marginTop="25dp"
+            android:textSize="26sp"
+            android:hint="Enter plate"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:background="@color/whitey"
+            android:layout_marginLeft="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        >
+        <Button
+            android:id="@+id/saveSale"
+            android:layout_width="180sp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
+            android:onClick="Save"
+            android:text="Save"
+            android:backgroundTint="@color/grayblack"
+            />
+
+        <Button
+            android:id="@+id/eraseSale"
+            android:layout_width="160sp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_height="50dp"
+            android:onClick="Erase"
+            android:text="Erase"
+            android:backgroundTint="@color/grayblack"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        >
+        <Button
+            android:id="@+id/generateInvoice"
+            android:layout_width="180sp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_marginRight="20dp"
+            android:onClick="Generate"
+            android:text="Generate"
+            android:backgroundTint="@color/grayblack"
+            />
+
+        <Button
+            android:id="@+id/cancelSale"
+            android:layout_width="160sp"
+            android:layout_weight="1"
+            android:textSize="18dp"
+            android:layout_height="50dp"
+            android:onClick="Cancel"
+            android:text="Cancel"
+            android:backgroundTint="@color/grayblack"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:padding="25dp">
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/backButton"
+        android:layout_height="50dp"
+        android:layout_width="250dp"
+        android:layout_weight="1"
+        android:textSize="18dp"
+        android:onClick="Back"
+        android:text="Back"
+        android:backgroundTint="@color/grayblack"/>
 </LinearLayout>
+
+    </LinearLayout>
+
