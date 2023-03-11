@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/yellow"
-    tools:context=".MainActivity">
+    tools:context=".ActivityClients">
 
     <TextView
         android:id="@+id/clientid"
