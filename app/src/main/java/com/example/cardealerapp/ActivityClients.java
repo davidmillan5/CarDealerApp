@@ -18,7 +18,7 @@ public class ActivityClients extends AppCompatActivity {
 
     CheckBox checkboxActive;
 
-    String identification, fullname, email;
+    String id, fullname, email;
 
     ActivityOpenHelper admin = new ActivityOpenHelper(this,"Cardealers.db",null,1);
 
@@ -42,22 +42,22 @@ public class ActivityClients extends AppCompatActivity {
 
 
     public void Save(View view){
-        identification = etidentification.getText().toString();
+        id = etidentification.getText().toString();
         fullname = etfullname.getText().toString();
         email = etemail.getText().toString();
-        if(identification.isEmpty() || fullname.isEmpty() || email.isEmpty()){
+        if(id.isEmpty() || fullname.isEmpty() || email.isEmpty()){
             Toast.makeText(this, "Please enter all of the data require", Toast.LENGTH_SHORT).show();
             etidentification.requestFocus();
         }else{
             SQLiteDatabase db = admin.getWritableDatabase();
             ContentValues register = new ContentValues();
-            register.put("identification", identification);
+            register.put("id", id);
             register.put("fullname", fullname);
             register.put("email",email);
             if(sw== 0){
                 response = db.insert("Clients",null,register);
             }else{
-                response = db.update("Clients",register,"identification = '"+identification+"'",null);
+                response = db.update("Clients",register,"id = '"+id+"'",null);
                 sw = 0;
             }
 
@@ -74,11 +74,11 @@ public class ActivityClients extends AppCompatActivity {
 
 
     public void Validate(View view){
-        identification = etidentification.getText().toString();
+        id = etidentification.getText().toString();
 
-        if(!identification.isEmpty()){
+        if(!id.isEmpty()){
             SQLiteDatabase db = admin.getReadableDatabase();
-            Cursor row = db.rawQuery("select * from Clients where identification ='"+identification+"'",null);
+            Cursor row = db.rawQuery("select * from Clients where id ='"+id+"'",null);
             if(row.moveToNext()){
                 sw = 1;
                 etfullname.setText(row.getString(1));
@@ -102,7 +102,7 @@ public class ActivityClients extends AppCompatActivity {
             SQLiteDatabase db = admin.getWritableDatabase();
             ContentValues register = new ContentValues();
             register.put("active","Off");
-            response = db.update("Clients",register,"identification='"+identification+"'",null);
+            response = db.update("Clients",register,"id='"+id+"'",null);
             if(response > 0){
                 Toast.makeText(this, "Register Deleted", Toast.LENGTH_SHORT).show();
                 Clean_fields();
