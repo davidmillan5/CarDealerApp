@@ -3,6 +3,7 @@ package com.example.cardealerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -112,6 +113,11 @@ public class ActivityCars extends AppCompatActivity {
             Toast.makeText(this, "Search the plate first", Toast.LENGTH_SHORT).show();
             jetplate.requestFocus();
         }
+    }
+
+    public void Back(View view){
+        Intent intentMain = new Intent(this,MainActivity.class);
+        startActivity(intentMain);
     }
     public void Cancel(View view){
         clearFields();
