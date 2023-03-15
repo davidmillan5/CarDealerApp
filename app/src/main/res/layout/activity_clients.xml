@@ -23,8 +23,9 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:background="@color/whitey"
-        android:textSize="20sp"
-        android:text="TextView"/>
+        android:textSize="32sp"
+        android:text="Account"
+        android:textFontWeight="700dp"/>
 
     <EditText
         android:id="@+id/etidentification"
