@@ -98,10 +98,8 @@ public class ActivityCars extends AppCompatActivity {
             sw = 0;
             SQLiteDatabase database = admin.getWritableDatabase();
             ContentValues row = new ContentValues();
-
             row.put("active","Off");
-            response = database.update("Vehicles",row,"plate'"+plate+"'",null);
-
+            response = database.update("Vehicles",row,"plate='"+plate+"'",null);
             if(response>0){
                 Toast.makeText(this, "Row erased", Toast.LENGTH_SHORT).show();
                 clearFields();
