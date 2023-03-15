@@ -3,6 +3,8 @@ package com.example.cardealerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -63,11 +65,72 @@ public class ActivityClients extends AppCompatActivity {
                 Toast.makeText(this, "Error Saving The Information", Toast.LENGTH_SHORT).show();
             }else{
                 Toast.makeText(this, "Register Save", Toast.LENGTH_SHORT).show();
+                Clean_fields();
             }
-
+            db.close();
         }
 
     }
 
+
+    public void Validate(View view){
+        identification = etidentification.getText().toString();
+
+        if(!identification.isEmpty()){
+            SQLiteDatabase db = admin.getReadableDatabase();
+            Cursor row = db.rawQuery("select * from Clients where identification ='"+identification+"'",null);
+            if(row.moveToNext()){
+                sw = 1;
+                etfullname.setText(row.getString(1));
+                etemail.setText(row.getString(2));
+                checkboxActive.setChecked(row.getString(3).equals("On"));
+            }else{
+                Toast.makeText(this, "Register Not Found", Toast.LENGTH_SHORT).show();
+                db.close();
+            }
+        }else{
+            Toast.makeText(this, "Id Need It To Verify", Toast.LENGTH_SHORT).show();
+            etidentification.requestFocus();
+        }
+    }
+
+
+
+    public void Erase(View view){
+        if(sw == 1){
+            sw = 0;
+            SQLiteDatabase db = admin.getWritableDatabase();
+            ContentValues register = new ContentValues();
+            register.put("active","Off");
+            response = db.update("Clients",register,"identification='"+identification+"'",null);
+            if(response > 0){
+                Toast.makeText(this, "Register Deleted", Toast.LENGTH_SHORT).show();
+                Clean_fields();
+            }else{
+                Toast.makeText(this, "Error Deleting ", Toast.LENGTH_SHORT).show();
+            }
+            db.close();
+        }else{
+            Toast.makeText(this, "Please Verify First", Toast.LENGTH_SHORT).show();
+            etidentification.requestFocus();
+        }
+    }
+
+    public void Cancel(View view){
+        Clean_fields();
+    }
+
+    public void Back(View view){
+        Intent intmain = new Intent(this, MainActivity.class);
+        startActivity(intmain);
+    }
+
+    private void Clean_fields(){
+        etidentification.setText("");
+        etfullname.setText("");
+        etemail.setText("");
+        etidentification.requestFocus();
+        sw = 0;
+    }
 
 }
