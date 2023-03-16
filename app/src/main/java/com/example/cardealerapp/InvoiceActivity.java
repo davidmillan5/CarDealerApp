@@ -53,13 +53,13 @@ public class InvoiceActivity extends AppCompatActivity {
                     "where invoice ='"+invoice+"'",null);
             if(row.moveToNext()){
                 sw = 1;
-                InvoiceNumber.setText(row.getString(1));
-                InvoiceIdClient.setText(row.getString(2));
-                InvoiceDate.setText(row.getString(3));
-                InvoiceCarPlate.setText(row.getString(4));
-                InvoiceClient.setText(row.getString(5));
-                InvoiceCarModel.setText(row.getString(6));
-                InvoiceCarBrand.setText(row.getString(7));
+                InvoiceNumber.setText(row.getString(0));
+                InvoiceIdClient.setText(row.getString(1));
+                InvoiceDate.setText(row.getString(2));
+                InvoiceCarPlate.setText(row.getString(3));
+                InvoiceClient.setText(row.getString(4));
+                InvoiceCarModel.setText(row.getString(5));
+                InvoiceCarBrand.setText(row.getString(6));
             }else{
                 Toast.makeText(this, "Enter a Valid Invoice Number", Toast.LENGTH_SHORT).show();
                 db.close();
