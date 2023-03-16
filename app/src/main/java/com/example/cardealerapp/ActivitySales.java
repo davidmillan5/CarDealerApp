@@ -58,7 +58,7 @@ public class ActivitySales extends AppCompatActivity {
             Cursor cursorClient = dbReadable.rawQuery("select id from Clients where id='"+id+"'",null);
             Cursor cursorVehicle = dbReadable.rawQuery("select plate from Vehicles where plate='"+plate+"'",null);
             Cursor cursorActive = dbReadable.rawQuery("select active from vehicles where plate='"+plate+"' and active='On'" ,null);
-            if(cursorClient.moveToNext() && cursorVehicle.moveToNext() && cursorActive.moveToNext()){
+            if(cursorClient.moveToNext() && cursorVehicle.moveToNext() && cursorActive.moveToNext() ){
 
                 row.put("invoice",invoice);
                 row.put("date", date);
