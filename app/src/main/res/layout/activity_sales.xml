@@ -83,6 +83,7 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -104,13 +105,13 @@
             />
 
         <Button
-            android:id="@+id/eraseSale"
+            android:id="@+id/generateSale"
             android:layout_width="160sp"
             android:layout_weight="1"
             android:textSize="18dp"
             android:layout_height="50dp"
-            android:onClick="Erase"
-            android:text="Erase"
+            android:onClick="Generate"
+            android:text="Generate"
             android:backgroundTint="@color/grayblack"/>
     </LinearLayout>
 
@@ -124,14 +125,14 @@
         android:layout_marginTop="15dp"
         >
         <Button
-            android:id="@+id/generateInvoice"
+            android:id="@+id/backInvoice"
             android:layout_width="180sp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:textSize="18dp"
             android:layout_marginRight="20dp"
-            android:onClick="Generate"
-            android:text="Generate"
+            android:onClick="Back"
+            android:text="Back"
             android:backgroundTint="@color/grayblack"
             />
 
@@ -146,23 +147,7 @@
             android:backgroundTint="@color/grayblack"/>
     </LinearLayout>
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:padding="25dp">
 
-    <Button
-        android:layout_gravity="center"
-        android:id="@+id/backButton"
-        android:layout_height="50dp"
-        android:layout_width="250dp"
-        android:layout_weight="1"
-        android:textSize="18dp"
-        android:onClick="Back"
-        android:text="Back"
-        android:backgroundTint="@color/grayblack"/>
-</LinearLayout>
 
     </LinearLayout>
 

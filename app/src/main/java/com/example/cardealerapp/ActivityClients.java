@@ -129,6 +129,7 @@ public class ActivityClients extends AppCompatActivity {
         etidentification.setText("");
         etfullname.setText("");
         etemail.setText("");
+        checkboxActive.setChecked(false);
         etidentification.requestFocus();
         sw = 0;
     }
