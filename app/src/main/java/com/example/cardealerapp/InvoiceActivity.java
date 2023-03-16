@@ -17,7 +17,7 @@ public class InvoiceActivity extends AppCompatActivity {
 
     TextView InvoiceNumber, InvoiceDate, InvoiceClient, InvoiceIdClient, InvoiceCarModel, InvoiceCarBrand, InvoiceCarPlate;
 
-    String invoice, id, date, plate, fullName, model, brand;
+    String invoice;
 
     ActivityOpenHelper admin = new ActivityOpenHelper(this,"Cardealers.db",null,1);
 
@@ -32,15 +32,24 @@ public class InvoiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invoice);
         getSupportActionBar().hide();
         etinvoice2 = findViewById(R.id.etinvoice2);
+        InvoiceNumber = findViewById(R.id.InvoiceNumber);
+        InvoiceDate = findViewById(R.id.InvoiceDate);
+        InvoiceIdClient = findViewById(R.id.InvoiceIdClient);
+        InvoiceCarPlate = findViewById(R.id.InvoiceCarPlate);
+        InvoiceCarBrand = findViewById(R.id.InvoiceCarBrand);
+        InvoiceCarModel = findViewById(R.id.InvoiceCarModel);
+        InvoiceClient = findViewById(R.id.InvoiceClient);
         sw = 0;
     }
 
-    public void Search(){
+    public void Search(View view){
         invoice = etinvoice2.getText().toString();
         if(!invoice.isEmpty()){
             SQLiteDatabase db = admin.getReadableDatabase();
-            Cursor row = db.rawQuery("select invoice, c.id, date, v.plate, fullName, model, brand " +
-                    "from Sales s inner join Clients c on s.id = c.id inner join Vehicles v on s.plate = v.plate " +
+         //   Cursor row = db.rawQuery("select * from Sales where invoice ='"+invoice+"'",null);
+
+            Cursor row = db.rawQuery("select s.invoice, c.id, s.date, v.plate, c.fullName, v.model, v.brand " +
+                    "from Sales as s inner join Clients as c on s.id = c.id inner join Vehicles as v on s.plate = v.plate " +
                     "where invoice ='"+invoice+"'",null);
             if(row.moveToNext()){
                 sw = 1;
