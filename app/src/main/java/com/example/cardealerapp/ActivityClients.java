@@ -125,7 +125,7 @@ public class ActivityClients extends AppCompatActivity {
         startActivity(intmain);
     }
 
-    private void Clean_fields(){
+    public void Clean_fields(){
         etidentification.setText("");
         etfullname.setText("");
         etemail.setText("");

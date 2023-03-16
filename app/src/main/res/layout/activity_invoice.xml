@@ -20,15 +20,16 @@
         android:layout_marginBottom="24dp">
 
         <EditText
+            android:id="@+id/etinvoice2"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:textSize="30sp"
-            android:hint="Enter Invoice"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:inputType="text"
+            android:layout_marginLeft="12dp"
             android:background="@color/whitey"
-            android:layout_marginLeft="12dp"/>
+            android:gravity="center"
+            android:hint="Enter Invoice"
+            android:inputType="text"
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/validateCar"
@@ -68,23 +69,21 @@
             android:id="@+id/InvoiceDate"
             android:layout_width="320sp"
             android:layout_height="50sp"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
             android:layout_gravity="center"
+            android:layout_marginTop="12dp"
             android:background="@color/whitey"
-            android:textSize="20sp"
-            />
+            android:gravity="center"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/InvoiceClient"
             android:layout_width="320sp"
             android:layout_height="50sp"
-            android:layout_marginTop="12dp"
-            android:gravity="center"
             android:layout_gravity="center"
+            android:layout_marginTop="12dp"
             android:background="@color/whitey"
-            android:textSize="20sp"
-            />
+            android:gravity="center"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/InvoiceIdClient"
