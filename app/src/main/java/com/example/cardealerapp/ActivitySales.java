@@ -100,6 +100,7 @@ public class ActivitySales extends AppCompatActivity {
         etinvoice.setText("");
         etdate.setText("");
         etCarPlate.setText("");
+        etIdClient.setText("");
         etIdClient.requestFocus();
     }
 
