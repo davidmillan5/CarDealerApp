@@ -20,7 +20,7 @@ public class ActivitySales extends AppCompatActivity {
 
     ActivityOpenHelper admin = new ActivityOpenHelper(this,"Cardealers.db",null,1);
 
-    long response;
+    long response, response2;
 
     byte sw;
 
@@ -54,19 +54,24 @@ public class ActivitySales extends AppCompatActivity {
 
             ContentValues row = new ContentValues();
 
+            ContentValues rowActive = new ContentValues();
             Cursor cursorClient = dbReadable.rawQuery("select id from Clients where id='"+id+"'",null);
             Cursor cursorVehicle = dbReadable.rawQuery("select plate from Vehicles where plate='"+plate+"'",null);
-
-            if(cursorClient.moveToNext() && cursorVehicle.moveToNext()){
+            Cursor cursorActive = dbReadable.rawQuery("select active from vehicles where plate='"+plate+"' and active='On'" ,null);
+            if(cursorClient.moveToNext() && cursorVehicle.moveToNext() && cursorActive.moveToNext()){
 
                 row.put("invoice",invoice);
                 row.put("date", date);
                 row.put("id", id);
                 row.put("plate",plate);
 
+                rowActive.put("active","Off");
+
                 response = dbWritable.insert("Sales",null,row);
 
-                if(response == 0){
+                response2 = dbWritable.update("Vehicles",rowActive,"plate='"+plate+"'",null);
+
+                if(response == 0 || response2 ==0){
                     Toast.makeText(this, "Error saving data", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Data saved", Toast.LENGTH_SHORT).show();
