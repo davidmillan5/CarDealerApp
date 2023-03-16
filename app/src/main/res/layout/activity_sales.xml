@@ -26,7 +26,6 @@
             android:layout_width="180sp"
             android:layout_height="64sp"
             android:ems="10"
-            android:layout_marginTop="25dp"
             android:textSize="27sp"
             android:hint="Enter code"
             android:gravity="center"
@@ -39,7 +38,6 @@
             android:layout_width="160sp"
             android:layout_height="64sp"
             android:ems="10"
-            android:layout_marginTop="25dp"
             android:textSize="26sp"
             android:hint="Enter date"
             android:gravity="center"
@@ -55,26 +53,26 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
+        android:layout_marginTop="18sp"
         >
+
         <EditText
             android:id="@+id/etIdClient"
             android:layout_width="180sp"
             android:layout_height="64sp"
-            android:ems="10"
-            android:layout_marginTop="25dp"
-            android:textSize="26sp"
-            android:hint="Enter id"
-            android:gravity="center"
             android:layout_gravity="center"
+            android:background="@color/whitey"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Enter id"
             android:inputType="text"
-            android:background="@color/whitey"/>
+            android:textSize="26sp" />
 
         <EditText
             android:id="@+id/etCarPlate"
             android:layout_width="160sp"
             android:layout_height="64sp"
             android:ems="10"
-            android:layout_marginTop="25dp"
             android:textSize="26sp"
             android:hint="Enter plate"
             android:gravity="center"
